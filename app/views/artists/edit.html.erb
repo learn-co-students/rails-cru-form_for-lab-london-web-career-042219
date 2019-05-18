@@ -1,0 +1,19 @@
+<div class="container">
+<br>
+<h1 class="text-success">Update Artist Info: </h1>
+<br>
+<%= form_for @artist do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
+  <br>
+  <%=  f.submit class:"btn btn-info"%>
+  <% end %>
+  <br>
+  <div class="btn btn-danger"><%= link_to "Delete Artist", :method => :delete %></div>
+  <br>
+  <br>
+  <div class="btn btn-warning"><%= link_to "Main Menu", artists_path %></div>
+</div>

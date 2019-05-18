@@ -1,0 +1,11 @@
+<div class="container">
+  <br>
+  <h1 class="text-danger">Artists: </h1>
+  <br>
+  <% @artists.each do |artist| %>
+  <p class="text-danger"><%= link_to artist.name, artist_path(artist) %></p>
+  <% end %>
+  <br>
+  <button type="button" class="btn btn-warning"><%= link_to "Main Menu", artists_path %></button>
+  <button type="button" class="btn btn-danger"><%= link_to "Add a New Artist", new_artist_path %></button>
+</div>

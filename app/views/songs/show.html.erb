@@ -1,0 +1,11 @@
+<div class="container">
+  <br>
+  <h1 class="text-success">Song: <%= @song.name%></h1>
+  <br>
+  <h4 class="text-success">Artist: <span class="text-success"><%= link_to @song.artist.name, artist_path(@song.artist)%></span></h4>
+  <br>
+  <h4 class="text-success">Genre: <span class="text-success"><%= link_to @song.genre.name, genre_path(@song.genre)%></span></h4>
+  <br>
+  <button type="button" class="btn btn-warning"><%= link_to "Main Menu", songs_path %></button>
+  <button type="button" class="btn btn-warning"><%= link_to "Edit Song", edit_song_path(@song) %></button>
+</div>

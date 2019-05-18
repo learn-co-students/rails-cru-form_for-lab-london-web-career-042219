@@ -1,0 +1,22 @@
+<div class="container">
+  <br>
+  <h1 class="text-success"><%= @genre.name%></h1>
+  <br>
+  <h4 class="text-success">Songs: </h4>
+  <br>
+  <% @genre.songs.each do |song| %>
+  <ul>
+    <li class="text-success"><%= link_to song.name, song_path(song) %></li>
+  </ul>
+  <% end %>
+  <br>
+  <h4 class="text-success">Artists: </h4>
+  <br>
+  <% @genre.artists.distinct.each do |artist| %>
+  <ul>
+    <li class="text-success"><%= link_to artist.name, artist_path(artist) %></li>
+  </ul>
+  <% end %>
+  <br>
+  <button type="button" class="btn btn-warning"><%= link_to "Main Menu", genres_path %></button>
+</div>
