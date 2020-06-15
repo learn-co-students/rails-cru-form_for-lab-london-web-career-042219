@@ -1,0 +1,14 @@
+<div class="container">
+  <br>
+  <h1 class="text-success">Add a New Genre: </h1>
+    <div class="text-danger">
+      <%= form_for @genre do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+      <%=  f.submit class: "btn btn-info" %>
+      <% end %>
+    </div>
+    <br>
+    <div class="btn btn-warning"><%= link_to "Main Menu", genres_path %></div>
+</div>

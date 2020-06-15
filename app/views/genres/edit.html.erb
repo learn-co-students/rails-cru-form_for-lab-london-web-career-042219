@@ -1,0 +1,16 @@
+<div class="container">
+<br>
+<h1 class="text-success">Update Genre Info: </h1>
+<br>
+<%= form_for @genre do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%=  f.submit class:"btn btn-info"%>
+  <% end %>
+  <br>
+  <div class="btn btn-danger"><%= link_to "Delete Genre", :method => :delete %></div>
+  <br>
+  <br>
+  <div class="btn btn-warning"><%= link_to "Main Menu", genres_path %></div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+<br>
+<h1 class="text-success">Update Song Info: </h1>
+<br>
+<%= form_for @song do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :artist_id %>
+  <%= f.number_field :artist_id %>
+  <br>
+  <%= f.label :genre_id %>
+  <%= f.number_field :genre_id %>
+  <br>
+  <%=  f.submit class:"btn btn-info"%>
+  <% end %>
+  <br>
+  <div class="btn btn-danger"><%= link_to "Delete Song", :method => :delete %></div>
+  <br>
+  <br>
+  <div class="btn btn-warning"><%= link_to "Main Menu", songs_path %></div>
+</div>

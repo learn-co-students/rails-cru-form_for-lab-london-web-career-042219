@@ -1,0 +1,10 @@
+<div class="container">
+  <br>
+  <h1 class="text-danger">Songs: </h1>
+  <br>
+  <% @songs.each do |song| %>
+  <p class="text-danger"><%= link_to song.name, song_path(song) %></p>
+  <% end %>
+  <br>
+  <button type="button" class="btn btn-warning"><%= link_to "Main Menu", songs_path %></button>
+</div>
